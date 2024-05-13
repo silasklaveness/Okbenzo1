@@ -18,6 +18,9 @@ const Kart = () => {
       };
 
       //MARKER
+      const { Marker } = (await loader.importLibrary(
+        "marker"
+      )) as google.maps.MarkerLibrary;
 
       const options: google.maps.MapOptions = {
         center: locationInMap,
@@ -26,14 +29,22 @@ const Kart = () => {
       };
 
       const map = new Map(mapRef.current as HTMLDivElement, options);
+
+      const marker = new Marker({
+        map: map,
+        position: locationInMap,
+      });
     };
     initializeMap();
   }, []);
   return (
-    <div className="h-[600px]" ref={mapRef}>
+    <div className="h-[400px] w-[400px]" ref={mapRef}>
       Google maps
     </div>
   );
 };
 
 export default Kart;
+function initializeMap() {
+  throw new Error("Function not implemented.");
+}
