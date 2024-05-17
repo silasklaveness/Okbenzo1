@@ -51,8 +51,9 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-1/2 text-center mt-6 md:mt-0">
-            <br />
-            <p className="text-gray-600 font-bold">Kongensgate 6</p>
+            <p className="text-gray-600 font-bold">
+              Kirkegata, 3211 Sandefjord
+            </p>
             <Kart />
           </div>
         </div>

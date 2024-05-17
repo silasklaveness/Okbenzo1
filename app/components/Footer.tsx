@@ -16,7 +16,7 @@ const Footer = () => {
             <span className="text-gray-700 hover:text-gray-900">Galleri</span>
           </Link>
         </div>
-        <div className="text-sm sm:text-xs">
+        <div className="text-[6px] sm:text-xs">
           <p>© 2023 Din bedrift</p>
           <p>Adresse: Din adresse</p>
           <p>Telefon: +123456789</p>
