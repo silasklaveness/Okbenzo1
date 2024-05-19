@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Calender from "./components/Calender";
 import Kart from "./components/Kart";
+import Button from "./components/Button";
 
 <div className="h-24" />;
 
@@ -20,7 +21,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 pr-6">
             <h1 className="text-3xl sm:text-4xl font-bold text-black">
-              Velkommen til okBenzo - Sandefjord frisør
+              Velkommen til okBenzo - Sandefjords frisør
             </h1>
             <div className="mt-6 text-gray-700">
               <h2 className="text-xl font-bold mb-2">Åpningstider</h2>
@@ -37,12 +38,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <a
-              href="/bestill"
-              className="mt-4 md:mt-6 bg-gray-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg inline-block"
-            >
-              Bestill Time
-            </a>
+            <br></br>
+            <Button />
+            <br />
             <p className="text-gray-600 text-sm mt-2">
               Ring oss på:{" "}
               <a href="tel:+4798000000" className="text-black font-medium">
@@ -51,16 +49,11 @@ export default function Home() {
             </p>
           </div>
           <div className="md:w-1/2 text-center mt-6 md:mt-0">
-            <p className="text-gray-600 font-bold">
-              Kirkegata, 3211 Sandefjord
-            </p>
+            <p className="text-gray-600 font-bold">Kirkegata 3211 Sandefjord</p>
             <Kart />
           </div>
         </div>
-
-        <div className="mt-6 text-gray-700"></div>
       </div>
-      <br />
       <br />
       <br />
       <div className="flex justify-center">

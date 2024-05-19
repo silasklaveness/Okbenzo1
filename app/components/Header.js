@@ -7,6 +7,11 @@ const Header = () => {
   const toggleNavbar = () => {
     setIsClick(!isClick);
   };
+
+  const buttonStyle = isClick
+    ? "transform rotate-180 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-600 transition-transform duration-300"
+    : "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-600";
+
   return (
     <>
       <nav
@@ -43,13 +48,10 @@ const Header = () => {
               </div>
             </div>
             <div className="md:hidden flex items-center">
-              <button
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-600"
-                onClick={toggleNavbar}
-              >
+              <button className={buttonStyle} onClick={toggleNavbar}>
                 {isClick ? (
                   <svg
-                    className="h-6 w-6"
+                    className="h-6 w-6 transform transition-transform duration-300"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
