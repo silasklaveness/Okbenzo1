@@ -2,6 +2,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const xInitialValue = "100%"; // Define initial value for '--x'
+const xAnimateValue = "-100%"; // Define animate value for '--x'
+
 const Button = () => {
   const handleClick = () => {
     window.location.href = "/bestill";
@@ -10,8 +13,8 @@ const Button = () => {
   return (
     <div>
       <motion.button
-        initial={{ "--x": "100%", scale: 1 }}
-        animate={{ "--x": "-100%" }}
+        initial={{ "--x": xInitialValue } as any}
+        animate={{ "--x": xAnimateValue } as any}
         whileTap={{ scale: 0.97 }}
         transition={{
           repeat: Infinity,
